@@ -16,7 +16,7 @@ const DEFAULT_ATHLETE = {
   recentTimes: [], // [{ id, event, time, date, note }]
 }
 
-const EVENT_OPTIONS = ['100m', '200m', '400m', '1500m', '5000m', '10000m', 'Marathon']
+const EVENT_OPTIONS = ['100m', '200m', '400m', '800m', '1500m', '5000m', '10000m', 'Marathon']
 const LEVEL_OPTIONS = ['High School', 'Collegiate', 'Semi-Pro', 'Recreational']
 const SESSION_TYPES = [
   { id: 'recovery', label: 'Recovery', color: 'gate' },

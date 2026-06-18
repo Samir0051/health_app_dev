@@ -75,6 +75,10 @@ export default function DuringWorkout() {
   }
 
   function logRest(actualRestSec) {
+    if (!restRec) {
+      console.warn('logRest called with no restRec set — ignoring')
+      return
+    }
     const entry = {
       groupIndex,
       repIds: group.map((r) => r.id),
@@ -216,7 +220,7 @@ export default function DuringWorkout() {
             {step === STEPS.REST && chosenRestSec !== null && (
               <div className="space-y-3">
                 <CardHeading title="Rest" dotColor="gate" />
-                <RestTimer targetSeconds={chosenRestSec} onLogRest={logRest} />
+                <RestTimer key={groupIndex} targetSeconds={chosenRestSec} onLogRest={logRest} />
               </div>
             )}
           </div>
