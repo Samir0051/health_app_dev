@@ -50,6 +50,8 @@ export default function DuringWorkout() {
   const [chosenRestSec, setChosenRestSec] = useState(null);
   const [lastSignal, setLastSignal] = useState(null);
   // Added a comment on during workout
+  // Added a comment to during workout
+  // Added another comment
   if (!currentSession || !currentSession.plan?.reps?.length) {
     return (
       <div>
